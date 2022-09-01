@@ -13,8 +13,19 @@ img {
 button {
   background-color: #666;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.5rem;
   width: 200px;
   height: 50px;
+}
+
+.output {
+  border: 3px solid white;
+  margin: 1em 5em 1em 5em;
+  display: none;
+  padding: 2rem;
+}
+
+#hours {
+  font-size: x_large;
 }
 
