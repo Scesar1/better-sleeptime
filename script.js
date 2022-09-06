@@ -3,6 +3,8 @@ const colors = ["eee2df","eed7c5","c89f9c","c97c5d","b36a5e", "eee2df"];
 function handleOnClickNow() {
   let output = document.querySelector(".output");
   output.style.display = "block";
+  let outputCalc = document.querySelector(".outputCalc");
+  outputCalc.style.display = "none";
 
   let hours = document.getElementById("hours");
   hours.innerHTML = "";
@@ -15,16 +17,19 @@ function handleOnClickNow() {
   for (let i = 1; i <= 6; i++) {
     now.setMinutes(now.getMinutes() + 90);
     let element = document.createElement('div');
-    element.innerText = now.toLocaleTimeString("en-US", { timeStyle: "short" });
+    let sleepHours = cycleConverter(i);
+    element.innerText = now.toLocaleTimeString("en-US", { timeStyle: "short" }) + " For " 
+    + i + " Cycles - " + sleepHours + " Hours of Sleep";
     element.style.color = colors[i - 1];
     hours.appendChild(element);
-
   } 
 }
 
 function handleOnClickCalculate() {
   let output = document.querySelector(".outputCalc");
   output.style.display = "block";
+  let outputNow = document.querySelector(".output");
+  outputNow.style.display = "none";
 
   let hours = document.getElementById("hours2");
   hours.innerHTML = "";
