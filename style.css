@@ -13,6 +13,7 @@ img {
 button {
   background-color: #666;
   color: #fff;
+  border: none;
   font-size: 1.5rem;
   width: 200px;
   height: 50px;
@@ -23,9 +24,30 @@ button {
   margin: 1em 5em 1em 5em;
   display: none;
   padding: 2rem;
+  font-size: 1.4rem;
+}
+
+.outputCalc {
+  border: 3px solid white;
+  margin: 1em 5em 1em 5em;
+  display: none;
+  padding: 2rem;
+  font-size: 1.4rem;
 }
 
 #hours {
   font-size: x_large;
 }
 
+select {
+  padding: 0.5rem;
+  font-size: 1.25rem;
+}
+
+#outer {
+  width: 100%;
+  text-align: center;
+}
+.inner {
+  display: inline-block;
+}

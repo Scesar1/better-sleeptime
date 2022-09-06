@@ -6,30 +6,100 @@
       <title>SleepTime</title>
       <link rel="stylesheet" href="style.css" />
     </body>
-      <h1>SleepTime</h1>
-      <img class="aligncenter size-full wp-image-35151 lazyloaded" src="SidebarMoon.webp" alt = "Moon">
-      <p style="color: white; font-size: 36px; line-height: 0.3em; font-weight: 300;">
-        I want to 
-        <strong>wake up</strong> 
-        at...
-      </p>
-      <button id="calculate" onclick="handleOnClick();">CALCULATE</button>
-      <div class="output">
-        <p>It takes the average human 14 minutes to fall sleep.</p>
-        <p>
-          If you head to bed right now, you should try to wake up at one of the
-          following times:
-        </p>
-        <p id="hours">
-          12:15 AM<br />
-          1:45 AM<br />
-          3:15 AM<br />
-          4:45 AM<br />
-          6:15 AM<br />
-          7:45 AM
-        </p>
-        <p>A good night's sleep consists of 5-6 complete sleep cycles.</p>
+    <h1>SleepTime</h1>
+    <img
+      class="aligncenter size-full wp-image-35151 lazyloaded"
+      src="SidebarMoon.webp"
+      alt="Moon"
+    />
+    <p
+      style="
+        color: white;
+        font-size: 36px;
+        line-height: 0.3em;
+        font-weight: 300;
+      "
+    >
+      I want to
+      <strong>wake up</strong>
+      at...
+    </p>
+    <select id = "selectHours">
+      <option value="">Select Hours</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+    </select>
+
+    <select id = "selectMinutes">
+      <option value="">Select Minutes</option>
+      <option value="0">00</option>
+      <option value="5">05</option>
+      <option value="10">10</option>
+      <option value="15">15</option>
+      <option value="20">20</option>
+      <option value="25">25</option>
+      <option value="30">30</option>
+      <option value="35">35</option>
+      <option value="40">40</option>
+      <option value="45">45</option>
+      <option value="50">50</option>
+      <option value="55">55</option>
+    </select>
+
+    <select id = "selectTime">
+      <option>AM</option>
+      <option>PM</option>
+    </select>
+
+    <br />
+    <br />
+    <div id="outer">
+      <div class="inner">
+        <button id="calculate" onclick="handleOnClickCalculate();">CALCULATE</button>
       </div>
-      <script src="script.js"></script>
+      <div class="inner">
+        <button id="now" onclick="handleOnClickNow();">SLEEP NOW</button>
+      </div>
+    </div>
+    <div class="output">
+      <p>It takes the average human 14 minutes to fall sleep.</p>
+      <p>
+        If you head to bed right now, you should try to wake up at one of the
+        following times:
+      </p>
+      <p id="hours">
+        12:15 AM<br />
+        1:45 AM<br />
+        3:15 AM<br />
+        4:45 AM<br />
+        6:15 AM<br />
+        7:45 AM
+      </p>
+      <p>A good night's sleep consists of 5-6 complete sleep cycles.</p>
+    </div>
+    <div class="outputCalc">
+      <p>
+        You should try to <strong> fall asleep</strong> at one of the
+        following times:
+      </p>
+      <p id="hours2">
+        12:15 AM<br />
+        1:45 AM<br />
+        3:15 AM<br />
+        4:45 AM<br />
+      </p>
+      <p>A good night's sleep consists of 5-6 complete sleep cycles.</p>
+    </div>
+    <script src="script.js"></script>
   </head>
 </html>
