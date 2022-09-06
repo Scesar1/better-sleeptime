@@ -13,7 +13,7 @@ function handleOnClickNow() {
   // allow 14 minutes to fall sleep!
   now.setMinutes(now.getMinutes() + 14);
 
-  // calculate sleep cycles!
+  // calculate sleep cycles
   for (let i = 1; i <= 6; i++) {
     now.setMinutes(now.getMinutes() + 90);
     let element = document.createElement('div');
